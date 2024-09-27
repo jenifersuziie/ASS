@@ -22,8 +22,8 @@ jobs:
       uses: actions/checkout@master
     - name: Install requests and nacl #安装requests和nacl模块
       run: |
-       pip install requests
-       pip install PyNaCl
+       pip install requests --break-system-packages
+       pip install PyNaCl --break-system-packages
     - name: update secrets #更新token到secret
       env: 
         #github的账号信息
